@@ -6,13 +6,13 @@ operational: boolean;
 launchDate: string;
 
 shouldShowWarning(): boolean {
-    if (this.type === 'Space Debris') {
+    // tslint:disable-next-line: quotemark
+    if (this.type.toLowerCase() === "space debris") {
         return true;
     } else {
         return false;
     }
 }
-
 constructor(name: string, type: string, launchDate: string, orbitType: string, operational: boolean) {
     this.name = name;
     this.orbitType = orbitType;
